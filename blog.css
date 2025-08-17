@@ -1,0 +1,14 @@
+/* Mengatur font utama dan warna latar belakang body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb; /* Latar belakang abu-abu terang */
+}
+
+/* Style untuk animasi header yang bergeser saat scroll */
+#page-header {
+    transition: transform 0.3s ease-in-out;
+}
+
+#page-header.header-hidden {
+    transform: translateY(-100%);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Portofolio</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ke file CSS khusus blog -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Kontainer utama untuk tampilan mobile -->
+    <div class="max-w-sm mx-auto bg-white min-h-screen shadow-lg flex flex-col">
+
+        <!-- Header Halaman Blog -->
+        <header id="page-header" class="sticky top-0 z-20 p-6 rounded-b-3xl text-white relative bg-cover bg-center shadow-lg">
+            <div class="absolute inset-0 bg-black/50 rounded-b-3xl"></div>
+            <div class="relative z-10">
+                <!-- Tombol Menu -->
+                <div class="flex justify-end mb-4">
+                    <button id="menu-toggle" class="p-2 bg-gray-500/50 rounded-lg hover:bg-gray-500/70 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                    </button>
+                </div>
+
+                <!-- Menu Navigasi (Dropdown) -->
+                <nav id="mobile-menu" class="hidden absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div class="py-2">
+                        <a href="/sblog/index.html" class="block px-4 py-2 text-sm text-purple-700 bg-purple-100 font-bold">BLOG</a>
+                        <a href="/katalog/index.html" class="block px-4 py-2 text-sm text-gray-800 font-semibold hover:bg-purple-100">FILE</a>
+                        <a href="#" id="kas-button-header" class="block px-4 py-2 text-sm text-gray-800 font-semibold hover:bg-purple-100">KAS</a>
+                    </div>
+                </nav>
+
+                <!-- Konten Profil -->
+                <div class="flex items-center space-x-4 pt-4 pb-2">
+                    <img src="https://placehold.co/80x80/7c3aed/ffffff?text=S" alt="Foto Profil" class="w-20 h-20 rounded-full border-4 border-white/50">
+                    <div>
+                        <h1 class="text-3xl font-bold">Syinv</h1>
+                        <p class="mt-1 text-white/90">Desainer & Developer</p>
+                    </div>
+                </div>
+                 <p class="mt-2 text-sm">Selamat datang di ruang kreatif saya. Di sini saya berbagi tulisan, proyek, dan ide-ide terbaru.</p>
+            </div>
+        </header>
+
+        <!-- Konten Utama -->
+        <main class="p-4 flex-grow">
+            <section>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Karya & Tulisan</h2>
+                <div id="blog-posts-grid" class="grid grid-cols-2 gap-4"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Pop-up -->
+    <div id="kas-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
+        <div class="bg-white p-6 rounded-lg shadow-xl text-center max-w-xs mx-auto">
+            <p class="text-lg font-semibold mb-4">Fitur ini sedang dalam pengembangan.</p>
+            <button id="close-modal" class="bg-purple-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-purple-600 transition-colors">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript baru -->
+    <script src="blog.js"></script>
+</body>
+</html>

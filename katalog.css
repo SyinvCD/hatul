@@ -1,0 +1,24 @@
+/* Mengatur font utama dan warna latar belakang body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb; /* Latar belakang abu-abu terang */
+}
+
+/* Style untuk animasi header yang bergeser saat scroll */
+#page-header {
+    transition: transform 0.3s ease-in-out;
+}
+
+#page-header.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Menyembunyikan scrollbar untuk list produk horizontal di berbagai browser */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
